@@ -7,6 +7,7 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), SensorEventListener {
@@ -18,7 +19,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     override fun onSensorChanged(event: SensorEvent?) {
         accelerometer_data.text = "x = ${event!!.values[0]}\n\n" +"y = ${event.values[1]}\n\n" + "z = ${event.values[2]}"
-        //accelerometer_data.text = "xxx"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
